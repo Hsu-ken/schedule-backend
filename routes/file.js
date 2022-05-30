@@ -31,6 +31,7 @@ File.post("/writeschedule", async function(req, res) {
 });
 File.get("/readschedule", async function(req, res) {
     let data = await FileControl.readschedule();
+    // console.log(data)
     if (data) {
         res.status(200).json(data);
     } else {
